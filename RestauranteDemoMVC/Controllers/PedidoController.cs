@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestauranteDemoMVC.Services;
 
 namespace RestauranteDemoMVC.Controllers
 {
-    public class PedidoController : Controller
+    public class PedidosController : Controller
     {
-        public IActionResult Index()
+        private readonly CoverManagerService _coverManagerService;
+
+        public PedidosController(CoverManagerService coverManagerService)
         {
-            return View();
+            _coverManagerService = coverManagerService;
+        }
+
+        public async Task<IActionResult> Index(int mesaId)
+        {
+            var pedidos = await _coverManagerService.ObtenerPedidosPorMesaAsync("Restaurante", "Fecha", mesaId); // Cambiar a datos reales
+            return View(pedidos);
         }
     }
 }
