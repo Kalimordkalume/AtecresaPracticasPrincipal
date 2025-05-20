@@ -7,6 +7,7 @@ namespace RestauranteDemoMVC.Services
 {
     public class CoverManagerService
     {
+<<<<<<< HEAD
         private readonly IHttpClientFactory _httpClientFactory;
 
         public CoverManagerService(IHttpClientFactory httpClientFactory)
@@ -108,5 +109,8 @@ namespace RestauranteDemoMVC.Services
 
             return new List<Pedido>();
         }
+=======
+
+>>>>>>> 7aa6a4b4e78c3a7189baca00e7c58b597070adeb
     }
 }

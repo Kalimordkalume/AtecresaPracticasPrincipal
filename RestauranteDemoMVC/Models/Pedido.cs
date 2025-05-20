@@ -6,9 +6,15 @@ namespace RestauranteDemoMVC.Models
     
     public class Pedido
     {
+<<<<<<< HEAD
         //[Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         //public int Id { get; set; }
+=======
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+>>>>>>> 7aa6a4b4e78c3a7189baca00e7c58b597070adeb
 
         //public int IdMesa { get; set; }
 

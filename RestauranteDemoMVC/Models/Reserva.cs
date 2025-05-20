@@ -5,6 +5,7 @@ namespace RestauranteDemoMVC.Models
 {
     public class Reserva
     {
+<<<<<<< HEAD
         //[Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         //public int ReservaId { get; set; }
@@ -35,6 +36,16 @@ namespace RestauranteDemoMVC.Models
         public string discount { get; set; } = "0";
         public string not_notify { get; set; } = "0";
         public string? @ref { get; set; } = null;
+=======
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ReservaId { get; set; }
+        [ForeignKey("ReservaId")]
+        public int MesaId { get; set; }
+        public DateTime Fecha { get; set; }
+        public string NombreCliente { get; set; } = string.Empty;
+        public string Telefono { get; set; } = string.Empty;
+>>>>>>> 7aa6a4b4e78c3a7189baca00e7c58b597070adeb
 
     }
 }
