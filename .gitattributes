@@ -1,0 +1,35 @@
+# Trata todos los archivos como texto y normaliza con LF
+* text=auto
+
+# Forza LF en archivos de código fuente
+*.cs   text diff=csharp
+*.cshtml text
+*.razor text
+*.css  text
+*.scss text
+*.js   text
+*.ts   text
+*.json text
+*.xml  text
+*.xaml text
+*.yml  text
+*.yaml text
+*.md   text
+*.sh   text eol=lf
+
+# Binarios o archivos que no deben tocarse
+*.dll  binary
+*.exe  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.tar  binary
+*.gz   binary
+*.7z   binary
+
+# Evita conflictos en locks de NuGet
+project.lock.json merge=union
